@@ -34,6 +34,12 @@ a
 
 a:hover { color:#70AB8F;}
 
+img.logo
+{
+	display: block;
+	margin: auto auto;
+}
+
 #footer
 {
 	padding-top: 5em;
