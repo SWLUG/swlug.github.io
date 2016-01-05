@@ -1,11 +1,9 @@
 SWLUG website
 =============
 
-Candidate swlug.org website files.
+swlug.org website files.
 
-This repository contains candidate files for an updated, simpler swlug.org website.
-
-Currently not the live site - here for discussion purposes!
+This repository contains files for the updated, simpler swlug.org website.
 
 The icons are from Font-Awesome, released under the MIT licence, and available here:
 
