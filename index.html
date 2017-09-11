@@ -9,15 +9,17 @@
 
 	<link rel="stylesheet" type="text/css" href="swlug.css" />
 	<link rel="stylesheet" href="font-awesome.min.css">
-</head>
-<body>
         <script>
                 var months=['January','February','March','April','May','June','July','August','September','October','November','December'];
                 function threadLink(){
                         var now = new Date()
-                        location.assign('https://mailman.lug.org.uk/pipermail/swlug/' + now.getFullYear() + '-' + months[now.getMonth()] + '/thread.html'); // 2017-September
+                        a = 'https://mailman.lug.org.uk/pipermail/swlug/' + now.getFullYear() + '-' + months[now.getMonth()] + '/thread.html'; // 2017-September
+                        var links = document.getElementsByClassName("listlink");
+                        for (var i = 0;  i < links.length;  i++) { links[i].href = a; }
                 }
         </script>
+</head>
+<body onload="threadLink()">
 	<section id="block">
 		<header>
 			<h1>SWLUG</h1>
@@ -40,13 +42,13 @@
 		</div>
 		<nav id="icons">
 			<ul>
-                                <li><a href="http://mailman.lug.org.uk/mailman/listinfo/swlug" title="SWLUG Mailing Lists"><i class="icon-envelope-alt"></i> Mailing Lists</a> - <a href="#" onclick="threadLink()">current month</a></li>
+                                <li><a href="http://mailman.lug.org.uk/mailman/listinfo/swlug" title="SWLUG Mailing List"><i class="icon-envelope-alt"></i> Mailing List</a> - <a class="listlink" href="#" target="_blank">current month</a></li>
 			<li><a href="http://irc.lc/oftc/swlug/swlug_newbie" title="The IRC channel"><i class="icon-comments"></i> Chat - irc.oftc.net: #swlug</a></li>
 			<li><a href="http://twitter.com/SWLUG" title="SWLUG on Twitter"><i class="icon-twitter"></i> Twitter</a></li>
 			<li><a href="https://plus.google.com/communities/102481350405972365888" title="SWLUG on Google Plus"><i class="icon-google-plus-sign"></i> Google Plus</a></li>
 			<li><a href="https://github.com/SWLUG" title="SWLUG on GitHub"><i class="icon-github"></i> Github</a></li>
 			<li><a href="https://www.linkedin.com/groups/SWLUG-4916922" title="SWLUG on LinkedIn"><i class="icon-linkedin-sign"></i> LinkedIn</a></li>
-			<li><i class="icon-beer"></i> Check the <a href="http://mailman.lug.org.uk/mailman/listinfo/swlug" title="SWLUG Mailing Lists">Mailing List</a> or <a href="http://irc.lc/oftc/swlug/swlug_newbie" title="The IRC channel">IRC</a> for the next meet</a></li>
+			<li><i class="icon-beer"></i>For the next meet, check the <a class="listlink" href="#" target="_blank">current month</a> of the <a href="http://mailman.lug.org.uk/mailman/listinfo/swlug" title="SWLUG Mailing List">Mailing List</a> or <a href="http://irc.lc/oftc/swlug/swlug_newbie" title="The IRC channel">IRC</a></li>
 			</ul>
 		</nav>
 	</section>
